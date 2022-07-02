@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %} {% block content %}
+  <h1>Book List</h1>
+  {% if places %}
+  <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+    {% for place in places %}
+      <li>
+        <a >{{place.name}}: {{place.num_books}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
+{% endblock %}

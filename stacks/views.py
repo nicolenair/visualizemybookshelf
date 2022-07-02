@@ -40,7 +40,8 @@ class BookListSearchView(generic.ListView):
     def get_queryset(self):
         return Book.objects.filter(title=self.request.GET.get("searched_title"))
 
-from .models import Book, Genre
+from .models import Book, Genre, Place
+from django.db.models import Count, Q, F, Case, When
 
 def index(request):
     """View function for home page of site."""
@@ -54,3 +55,15 @@ def index(request):
 
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
+
+def book_geography_agg(request):
+    places = Place.objects.annotate(num_books=Count(Case(
+        When(book__users=request.user, then=1))))
+    print(places)
+    return render(request, 'stacks/book_agg_geography.html', {"places": places})
+
+def book_genre_agg(request):
+    genres = Genre.objects.annotate(num_books=Count(Case(
+        When(book__users=request.user, then=1))))
+
+    return render(request, 'stacks/book_agg_genre.html', {"genres": genres})

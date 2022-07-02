@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %} {% block content %}
+  <h1>Book List</h1>
+  {% if genres %}
+  <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+    {% for genre in genres %}
+      <li>
+        <a >{{genre.name}}: {{genre.num_books}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
+{% endblock %}
