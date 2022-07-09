@@ -8,5 +8,6 @@ urlpatterns = [
     path('books-genre/', views.book_genre_agg, name='book-list-genre'),
     path('books-date/', views.MyBookListDateView.as_view(), name='book-list-date'),
     path('books-search/', views.BookListSearchView.as_view(), name='book-list-search'),
+    path('test-up/', views.test_update, name='test'),
     path('', RedirectView.as_view(url='books-geo/'), name='index'),
 ]

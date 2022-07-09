@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from stacks.models import Book, User
 from django.contrib.auth.mixins import PermissionRequiredMixin
+from stacks.request_api import MaintainBookDatabase
 
 # Create your views here.
 from django.views import generic
@@ -67,3 +68,13 @@ def book_genre_agg(request):
         When(book__users=request.user, then=1))))
 
     return render(request, 'stacks/book_agg_genre.html', {"genres": genres})
+
+def test_update(request):
+    db_update_obj = MaintainBookDatabase()
+    db_update_obj()
+    num_books = Book.objects.all().count()
+
+    context = {
+        'num_books': num_books,
+    }
+    return render(request, 'index.html', context=context)

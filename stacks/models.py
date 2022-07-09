@@ -45,7 +45,7 @@ class Book(models.Model):
     )
     place_of_pub = models.ForeignKey(Place, help_text="Select a place for this book", on_delete=models.SET_NULL, null=True)
 
-    date_of_pub = models.DateField(null = True, blank = True)
+    date_of_pub = models.IntegerField(null = True, blank = True)
 
     genre = models.ForeignKey(Genre, help_text="Select a genre for this book", on_delete=models.SET_NULL, null=True)
 
