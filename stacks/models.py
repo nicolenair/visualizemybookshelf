@@ -24,7 +24,9 @@ class Place(models.Model):
 class Book(models.Model):
     """Model representing a book (but not a specific copy of a book)."""
     class Meta:
-        permissions = (("can_view_personal_bookshelf", "view personal bookshelf"),)
+        permissions = (
+            ("can_view_personal_bookshelf", "view personal bookshelf"),
+            ("can_edit_personal_bookshelf", "edit personal bookshelf"))
 
     title = models.CharField(max_length=200)
 

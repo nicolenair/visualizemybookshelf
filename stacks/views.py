@@ -4,34 +4,21 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from stacks.request_api import MaintainBookDatabase
 import plotly.graph_objects as go
 import plotly.offline as opy
+from django.contrib.auth.decorators import permission_required, login_required
 
 from .models import Book, Genre, Place
 from django.db.models import Count, Q, F, Case, When
 # Create your views here.
 from django.views import generic
 
-class MyBookListView(PermissionRequiredMixin,generic.ListView):
-    permission_required = 'stacks.can_view_personal_bookshelf'
-    model = Book
-    template_name = 'stacks/book_list.html' 
+@login_required
+@permission_required('catalog.can_view_personal_bookshelf')
+def view_all_books(request):
+    books = Book.objects.filter(users=request.user)
+    return render(request, 'stacks/book_list.html', {"book_list": [i.title for i in books]})
 
-    def get_queryset(self):
-        books = Book.objects.filter(users=self.request.user)
-        return [i.title for i in books]
-
-def index(request):
-    """View function for home page of site."""
-
-    # Generate counts of some of the main objects
-    num_books = Book.objects.all().count()
-
-    context = {
-        'num_books': num_books,
-    }
-
-    # Render the HTML template index.html with the data in the context variable
-    return render(request, 'index.html', context=context)
-
+@login_required
+@permission_required('catalog.can_edit_personal_bookshelf')
 def add_book(request):
     data = request.POST
     matching_book = Book.objects.get(isbn=data["isbn"])
@@ -46,6 +33,8 @@ def book_search_view(request):
     matching_book = [{"title": i.title, "isbn": i.isbn} for i in matching_book]
     return render(request, 'stacks/book_list_search_result.html'  , {"book_list": matching_book})
 
+@login_required
+@permission_required('catalog.can_view_personal_bookshelf')
 def book_date_agg(request):
     pagenums = Book.objects.filter(users=request.user)
     trace1 = go.Histogram(x=[p.date_of_pub for p in pagenums])
@@ -65,6 +54,8 @@ def book_date_agg(request):
     div = opy.plot(figure, auto_open=False, output_type='div')
     return render(request, 'stacks/book_agg_hist.html' , {"graph": div})
 
+@login_required
+@permission_required('catalog.can_view_personal_bookshelf')
 def book_page_num_agg(request):
     pagenums = Book.objects.filter(users=request.user)
     trace1 = go.Histogram(x=[p.page_num for p in pagenums])
@@ -84,7 +75,8 @@ def book_page_num_agg(request):
     div = opy.plot(figure, auto_open=False, output_type='div')
     return render(request, 'stacks/book_agg_pagenums.html', {"graph": div})
 
-
+@login_required
+@permission_required('catalog.can_view_personal_bookshelf')
 def book_genre_agg(request):
     genres = Genre.objects.annotate(num_books=Count(Case(
         When(book__users=request.user, then=1))))
@@ -101,7 +93,7 @@ def book_genre_agg(request):
             color="RebeccaPurple"
         )
     )
-    figure.update_yaxes(tick0=1, dtick=1)
+    figure.update_xaxes(tick0=1, dtick=1)
 
     div = opy.plot(figure, auto_open=False, output_type='div')
     return render(request, 'stacks/book_agg_hist.html', {"graph": div})
