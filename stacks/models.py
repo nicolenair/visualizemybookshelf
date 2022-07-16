@@ -43,9 +43,9 @@ class Book(models.Model):
         unique=True,
         help_text='13 Character <a href="https://www.isbn-international.org/content/what-isbn">ISBN number</a>',
     )
-    place_of_pub = models.ForeignKey(Place, help_text="Select a place for this book", on_delete=models.SET_NULL, null=True)
 
     date_of_pub = models.IntegerField(null = True, blank = True)
+    page_num = models.IntegerField(null = True, blank = True)
 
     genre = models.ForeignKey(Genre, help_text="Select a genre for this book", on_delete=models.SET_NULL, null=True)
 
