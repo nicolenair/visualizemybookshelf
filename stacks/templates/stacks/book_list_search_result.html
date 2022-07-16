@@ -4,7 +4,13 @@
   <ul class="text-left" style="display:inline-block;vertical-align:middle;">
     {% for book in book_list %}
       <li>
-        <a >{{ book.title}}</a>
+        <div>
+          <a >{{ book.title}} 
+          <form method="POST" action="book-add/">
+          {% csrf_token %}
+            <button  class="button" name="isbn" value={{book.isbn}}>Add</button>
+        </div>
+        </form>
       </li>
     {% endfor %}
   </ul>
