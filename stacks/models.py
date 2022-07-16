@@ -49,6 +49,8 @@ class Book(models.Model):
     date_of_pub = models.IntegerField(null = True, blank = True)
     page_num = models.IntegerField(null = True, blank = True)
 
+    country_of_pub = models.ForeignKey(Place,  null=True, on_delete=models.SET_NULL,)
+
     genre = models.ForeignKey(Genre, help_text="Select a genre for this book", on_delete=models.SET_NULL, null=True)
 
     def __str__(self):

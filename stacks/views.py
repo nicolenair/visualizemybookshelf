@@ -81,7 +81,7 @@ def book_genre_agg(request):
     genres = Genre.objects.annotate(num_books=Count(Case(
         When(book__users=request.user, then=1))))
 
-    print([p.num_books for p in genres])
+    genres = [i for i in genres if i.num_books > 0]
     trace1 = go.Bar(y=[p.name for p in genres], x=[p.num_books for p in genres], orientation='h')
     figure=go.Figure()
     figure.add_trace(trace1)
