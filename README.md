@@ -1,4 +1,4 @@
-# stacks
+# Visualize My Bookshelf
 
 Web app for visualizing data about the books a user has read.
 
