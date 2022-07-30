@@ -16,6 +16,6 @@ When a user uses the search bar to search for a new book to add a new book to th
 
 Then the user, clicks "add book" and the visualizations of the user's bookshelf statistics are auto-updated.
 
-The above functionality works, but here are some things scheduled to be added:
+The above functionality works, but here are some things scheduled for improvement:
 - improving the automatic information extraction algorithm from Wikipedia and Google Books API.
 - increase the number and complexity of supported visualizations
