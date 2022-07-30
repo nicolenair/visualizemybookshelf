@@ -18,4 +18,4 @@ Then the user, clicks "add book" and the visualizations of the user's bookshelf 
 
 The above functionality works, but here are some things scheduled to be added:
 - improving the automatic information extraction algorithm from Wikipedia and Google Books API.
-- increase the number of supported visualizations (think: 
+- increase the number and complexity of supported visualizations
