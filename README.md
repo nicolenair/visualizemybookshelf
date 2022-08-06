@@ -3,10 +3,9 @@
 Web app for visualizing data about the books a user has read.
 
 Currently supported visualizations:
-- year of publication
-- place of publication
-- genre
-- number of pages
+- distribution of year of publication (histogram)
+- bar chart of genre
+- distribution of number of pages (histogram)
 
 The application, like any Django application, can be run via python manage.py runserver
 
