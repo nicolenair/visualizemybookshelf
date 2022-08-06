@@ -1,16 +1,20 @@
-# stacks
+# Visualize My Bookshelf
 
-Web app for tracking info (place of publication, year of publication, genre) on books a user has read.
-Prototype can be run via python manage.py runserver, but is very much a work in progress. 
+Web app for visualizing data about the books a user has read.
 
-# Tasks
-- [x] Basic login functionality
-- [x] Basic pages for listing geographical, time, and genre information on all books a user has read
-- [x] Basic authentication/permissions for personal bookshelf information
-- [x] Let users search the database for books by their title
-- [ ] Add login button.
-- [ ] Display count statistics (geography, time, genre) instead of only listing information of each individual book instance.
-- [ ] Allow user to add new books via the application (no reliance on admin page)
-- [ ] Populate database using Wikipedia API
-- [ ] ci/cd
-- [ ] Add nice visualizations of the bookshelf statistics instead of just listing the counts
+Currently supported visualizations:
+- distribution of year of publication (histogram)
+- bar chart of genre
+- distribution of number of pages (histogram)
+
+The application, like any Django application, can be run via python manage.py runserver
+
+When a user uses the search bar to search for a new book to add a new book to their shelf:
+- if the book is in the database, it is displayed
+- if the book is not in the database, the application searches Wikipedia and Google Books and auto-populates the relevant statistics about that book in the application database.
+
+Then the user, clicks "add book" and the visualizations of the user's bookshelf statistics are auto-updated.
+
+The above functionality works, but here are some things scheduled for improvement:
+- improving the automatic information extraction algorithm from Wikipedia and Google Books API.
+- increase the number and complexity of supported visualizations
