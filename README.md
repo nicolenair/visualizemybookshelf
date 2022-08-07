@@ -3,7 +3,7 @@
 A web app which automatically extracts and processes data about the books that a user has read and then visualizes that data in interesting ways.
 The algorithm currently sources data from both the Google Books API and Wikipedia, using both rule-based and deep learning-based extraction methods.
 
-## Installing / Getting Started Locally
+## Installing / Using the App Locally
 
 Clone the repository and run
 
