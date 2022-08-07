@@ -8,7 +8,7 @@ The algorithm currently sources data from both the Google Books API and Wikipedi
 Clone the repository and run
 
 ```shell
-python3 -m venv vmb-env
+python3.9 -m venv vmb-env
 source vmb-env/bin/activate
 pip install -r requirements.txt
 python manage.py runserver
