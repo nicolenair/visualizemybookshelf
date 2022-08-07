@@ -8,6 +8,7 @@ The algorithm currently sources data from both the Google Books API and Wikipedi
 Clone the repository and run
 
 ```shell
+cd visualizemybookshelf
 python3.9 -m venv vmb-env
 source vmb-env/bin/activate
 pip install -r requirements.txt
