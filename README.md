@@ -24,10 +24,11 @@ And you should be good to go
 <img width="1440" alt="Screen Shot 2022-08-07 at 12 55 45" src="https://user-images.githubusercontent.com/27603465/183274759-87cc9bd1-fae4-4341-8ac3-bccf55e73a6e.png">
 
 ### You'll be presented with an empty bookshelf. Type in the search bar to search for a book to add to your bookshelf. Click "search"
-<img width="1440" alt="Screen Shot 2022-08-07 at 13 02 48" src="https://user-images.githubusercontent.com/27603465/183274793-9a505981-b937-47cc-8279-7d11ab99451a.png">
+<img width="1439" alt="Screen Shot 2022-08-07 at 12 56 39" src="https://user-images.githubusercontent.com/27603465/183274781-564d47d0-d35a-413f-bb22-fe882f3dddcb.png">
 
 ### The underlying information extraction algorithm will automatically search the web and extract relevant info about your book and add it to your local SQL database.
-<img width="1439" alt="Screen Shot 2022-08-07 at 12 56 39" src="https://user-images.githubusercontent.com/27603465/183274781-564d47d0-d35a-413f-bb22-fe882f3dddcb.png">
+<img width="1440" alt="Screen Shot 2022-08-07 at 13 02 48" src="https://user-images.githubusercontent.com/27603465/183274793-9a505981-b937-47cc-8279-7d11ab99451a.png">
+
 
 ### Based on the extracted information, visualizations of your bookshelf will be auto-updated and you can view them by clicking the appropriate tab. 
 For example, if you click into the "Genre" tab you can see the distribution of genres the books you have read.
