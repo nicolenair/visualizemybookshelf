@@ -1,6 +1,7 @@
 # Visualize My Bookshelf
 
-Web app for automatically extracting and visualizing data about the books a user has read.
+A web app which automatically extracts and processes data about the books that a user has read and then visualizes that data.
+The algorithm currently sources data from both the Google Books API and Wikipedia, using both rule-based and deep learning-based extraction methods.
 
 ## Installing / Getting Started Locally
 
