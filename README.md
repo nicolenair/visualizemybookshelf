@@ -26,7 +26,7 @@ And you should be good to go
 ### You'll be presented with an empty bookshelf. Type in the search bar to search for a book to add to your bookshelf. Click "search"
 <img width="1439" alt="Screen Shot 2022-08-07 at 12 56 39" src="https://user-images.githubusercontent.com/27603465/183274781-564d47d0-d35a-413f-bb22-fe882f3dddcb.png">
 
-### The underlying information extraction algorithm will automatically search the web and extract relevant info about your book and add it to your local SQL database.
+### The underlying information extraction algorithm will automatically search the web and extract relevant info about your book and add it to your local SQL database. Click "add" to add the book to your bookshelf
 <img width="1440" alt="Screen Shot 2022-08-07 at 13 02 48" src="https://user-images.githubusercontent.com/27603465/183274793-9a505981-b937-47cc-8279-7d11ab99451a.png">
 
 
