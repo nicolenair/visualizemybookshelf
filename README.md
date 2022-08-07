@@ -32,7 +32,9 @@ And you should be good to go
 <img width="1439" alt="Screen Shot 2022-08-07 at 12 56 39" src="https://user-images.githubusercontent.com/27603465/183274781-564d47d0-d35a-413f-bb22-fe882f3dddcb.png">
 </td></tr></table>
 
-### The underlying information extraction algorithm will automatically search the web and extract relevant info about your book and add it to your local SQL database. Click "add" to add the book to your bookshelf
+### The underlying information extraction algorithm will automatically search the web and extract relevant info such as genre, year of publication etc about your book and add it to the database. 
+
+# When the search result pops up, if the title & author are correct, click "add" to add the book to your bookshelf
 <table><tr><td>
 <img width="1440" alt="Screen Shot 2022-08-07 at 13 02 48" src="https://user-images.githubusercontent.com/27603465/183274793-9a505981-b937-47cc-8279-7d11ab99451a.png">
 </td></tr></table>
