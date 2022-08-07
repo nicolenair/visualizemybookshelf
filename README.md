@@ -23,7 +23,7 @@ And you should be good to go
 <img width="1439" alt="Screen Shot 2022-08-07 at 12 55 07" src="https://user-images.githubusercontent.com/27603465/183274728-8b5927ba-2377-4a6b-b151-df221af97569.png">
 </td></tr></table>
 
-### Register a user account
+### Register a user account and then login
 <table><tr><td>
 <img width="1440" alt="Screen Shot 2022-08-07 at 12 55 45" src="https://user-images.githubusercontent.com/27603465/183274759-87cc9bd1-fae4-4341-8ac3-bccf55e73a6e.png">
 </td></tr></table>
