@@ -27,7 +27,7 @@ And you should be good to go
 <img width="1440" alt="Screen Shot 2022-08-07 at 12 55 45" src="https://user-images.githubusercontent.com/27603465/183274759-87cc9bd1-fae4-4341-8ac3-bccf55e73a6e.png">
 </td></tr></table>
 
-### You'll be presented with an empty bookshelf. Type in the search bar to search for a book to add to your bookshelf. Click "search"
+### Upon login, you'll be presented with an empty bookshelf. Type in the search bar to search for a book to add to your bookshelf. Click "search"
 <table><tr><td>
 <img width="1439" alt="Screen Shot 2022-08-07 at 12 56 39" src="https://user-images.githubusercontent.com/27603465/183274781-564d47d0-d35a-413f-bb22-fe882f3dddcb.png">
 </td></tr></table>
