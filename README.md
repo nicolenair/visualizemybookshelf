@@ -34,6 +34,6 @@ For example, if you click into the "Genre" tab you can see the distribution of g
 <img width="1440" alt="Screen Shot 2022-08-07 at 13 03 25" src="https://user-images.githubusercontent.com/27603465/183274866-70febe39-7d98-43fa-86ae-f22db8a1222a.png">
 
 
-This is a work in progress, so bear in mind that proper error handling hasn't been done and is high on the priority list!
+This is a work in progress, so bear in mind that proper error handling and unit testing hasn't been done but is high on the priority list!
 
 
