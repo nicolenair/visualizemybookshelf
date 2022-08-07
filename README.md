@@ -55,7 +55,7 @@ Then navigate to http://127.0.0.1:8000/ in your browser and you should be good t
 
 ### If another user has already searched for this book before, some of the the book's information is already saved in Visualize My Bookshelf's database, so the saved information will be pulled from the database to avoid unnecessarily re-extracting the information.
 
-The title and author of the book will then be displayed to you. If the title & author are correct, click "add" to add the book to your bookshelf. 
+### The title and author of the book will then be displayed to you. If the title & author are correct, click "add" to add the book to your bookshelf. 
 <table><tr><td><img width="1440" alt="Screen Shot 2022-08-07 at 13 02 48" src="https://user-images.githubusercontent.com/27603465/183275384-cef3db3b-d0ca-4761-a11c-04e9c7b9b04e.png">
 </td></tr></table>
 
