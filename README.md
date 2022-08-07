@@ -31,7 +31,7 @@ And you should be good to go
 
 
 ### Based on the extracted information, visualizations of your bookshelf will be auto-updated and you can view them by clicking the appropriate tab. 
-For example, if you click into the "Genre" tab you can see the distribution of genres the books you have read.
+### For example, if you click into the "Genre" tab you can see the distribution of genres the books you have read.
 <img width="1440" alt="Screen Shot 2022-08-07 at 13 03 25" src="https://user-images.githubusercontent.com/27603465/183274866-70febe39-7d98-43fa-86ae-f22db8a1222a.png">
 
 
