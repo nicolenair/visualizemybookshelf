@@ -34,7 +34,7 @@ And you should be good to go
 
 ### The underlying information extraction algorithm will automatically search the web and extract relevant info such as genre, year of publication etc about your book and add it to the database. 
 
-# When the search result pops up, if the title & author are correct, click "add" to add the book to your bookshelf
+### It will then display the title and author of the book to you. If the title & author are correct, click "add" to add the book to your bookshelf
 <table><tr><td>
 <img width="1440" alt="Screen Shot 2022-08-07 at 13 02 48" src="https://user-images.githubusercontent.com/27603465/183274793-9a505981-b937-47cc-8279-7d11ab99451a.png">
 </td></tr></table>
