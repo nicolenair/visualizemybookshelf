@@ -5,7 +5,7 @@
     {% for book in book_list %}
       <li>
         <div>
-          <a >{{ book.title}} 
+          <a >{{ book.title}} by {{ book.author}}</a>
           <form method="POST" action="book-add/">
           {% csrf_token %}
             <button  class="button" name="isbn" value={{book.isbn}}>Add</button>

@@ -14,7 +14,7 @@ from django.views import generic
 @login_required
 def view_all_books(request):
     books = Book.objects.filter(users=request.user)
-    return render(request, 'stacks/book_list.html', {"book_list": [i.title for i in books]})
+    return render(request, 'stacks/book_list.html', {"book_list": [{"title": i.title, "author": i.author} for i in books]})
 
 @login_required
 def add_book(request):
@@ -22,7 +22,7 @@ def add_book(request):
     matching_book = Book.objects.get(isbn=data["isbn"])
     matching_book.users.add(request.user)
     books = Book.objects.filter(users=request.user)
-    return render(request, 'stacks/book_list.html'  , {"book_list": [i.title for i in books]})
+    return render(request, 'stacks/book_list.html'  , {"book_list": [{"title": i.title, "author": i.author} for i in books]})
 
 def book_search_view(request):
     db_update_obj = MaintainBookDatabase()
@@ -30,7 +30,7 @@ def book_search_view(request):
     matching_book = Book.objects.filter(isbn=isbn)
 
     print("matching", matching_book, isbn)
-    matching_book = [{"title": i.title, "isbn": i.isbn} for i in matching_book]
+    matching_book = [{"title": i.title, "isbn": i.isbn, "author": i.author} for i in matching_book]
     return render(request, 'stacks/book_list_search_result.html'  , {"book_list": matching_book})
 
 @login_required
