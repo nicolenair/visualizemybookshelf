@@ -101,7 +101,7 @@ class MaintainBookDatabase:
         if date_pub == "[CLS]":
             date_pub = self.information_extractor(f"What is the year?", text)
 
-        print(text)
+        date_pub = re.search("(\d\d\d\d)", date_pub).group(1)
 
         if not Book.objects.filter(isbn=isbn).exists():
             if not Author.objects.filter(name=author).exists():
@@ -132,6 +132,8 @@ class MaintainBookDatabase:
             if isbn is not None: #do not create books with no isbn $ and len(Genre.objects.filter(name=title))==0
                 self.create_book(title_google_normalized, author, page_num, date_pub, summary, genre, isbn)
                 return isbn
+
+        return isbn
 
     def convert_title_url(self, title):
         return re.sub(" ", "%20", title)
