@@ -15,7 +15,7 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-And you should be good to go
+Then navigate to http://127.0.0.1:8000/ in your browser and you should be good to go
 
 ## Brief Intro to Site Navigation
 
