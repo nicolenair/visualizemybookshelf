@@ -12,8 +12,18 @@ cd visualizemybookshelf
 python3.9 -m venv vmb-env
 source vmb-env/bin/activate
 pip install -r requirements.txt
-python manage.py runserver
+python3 -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
 ```
+
+After the script above ends, a secret key will be outputted. This is your Django secret key. Do not push it into version control.
+Create a file called `.env` and in it type the following:
+
+```
+SECRET_KEY = <your secret key from the previous step>
+DEBUG = true
+```
+
+DEBUG is set to true in the development environment. Don't do this in production.
 
 Then navigate to http://127.0.0.1:8000/ in your browser and you should be good to go
 
