@@ -51,6 +51,8 @@ The title and author of the book will then be displayed to you. If the title & a
 - UI/aesthetical improvements
 - improvements in both the speed and accuracy of the automatic information extraction algorithm
 - increase in the variety of supported bookshelf visualizations & summarizations
+- CI/CD
+- auto importing of bookshelf data from Goodreads
 
 
 
