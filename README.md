@@ -25,6 +25,13 @@ DEBUG = true
 
 DEBUG is set to true in the development environment. Don't do this in production.
 
+Then in the terminal type:
+
+```
+python3 manage.py migrate
+python3 manage.py runserver
+```
+
 Then navigate to http://127.0.0.1:8000/ in your browser and you should be good to go
 
 ## Brief Intro to Site Navigation
