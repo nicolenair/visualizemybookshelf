@@ -51,7 +51,8 @@ class MaintainBookDatabase:
             title_google_normalized = google_books_response["items"][i]["volumeInfo"]["title"] #tmp
             break
 
-        print("TITLE ", title_google_normalized, "ISBN", isbn)
+        if Book.objects.filter(isbn=isbn).exists():
+            return isbn
 
         search_url = title_google_normalized
         search_response = requests.get(f"https://en.wikipedia.org/w/api.php?action=opensearch&search={search_url}&format=json").text
