@@ -46,6 +46,11 @@ The title and author of the book will then be displayed to you. If the title & a
 </td></tr></table>
 
 
-This is a work in progress, so bear in mind that proper error handling and unit testing hasn't been done but is high on the priority list!
+### TODO:
+- Proper error handling and unit testing
+- UI/aesthetical improvements
+- improvements in both the speed and accuracy of the automatic information extraction algorithm
+- increase in the number of supported bookshelf visualizations & summarizations
+
 
 
